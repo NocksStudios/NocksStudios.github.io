@@ -1,11 +1,11 @@
 jQuery(function($){
 
-	var longitude = 45.124099;
-	var latitude = -123.113634;
+	var longitude = 41.8369;
+	var latitude = -87.6847;
 	var canvas = "map";
 
-	
-	function randing_map(canvas, lan, lat){			
+
+	function randing_map(canvas, lan, lat){
 			var myLatlng = new google.maps.LatLng(lan,lat);
 			var myOptions = {
 						zoom: 13,
@@ -13,7 +13,7 @@ jQuery(function($){
 						mapTypeId: google.maps.MapTypeId.ROADMAP,
 						maxZoom   : 20,
     					disableDefaultUI: true
-					}			
+					}
 			var map = new google.maps.Map( document.getElementById(canvas), myOptions );
 			var marker = new google.maps.Marker({
 			    position : myLatlng,
@@ -40,11 +40,11 @@ jQuery(function($){
 			      { visibility: "off" }
 			    ]
 			  }
-			];	
+			];
 			var infowindow = new google.maps.InfoWindow({
 				content:"<div class='map_adresse'><div class='map_address'><span class='address'>Address : </span>1401 South Grand Avenue Los Angeles, CA 90015</div> <div class='map_tel'><span class='tel'>Phone : </span>(213) 748-2411</div></div>"
-			});	
-			
+			});
+
 			map.setOptions({styles: styles});
 
 			google.maps.event.addListener(marker, 'click', function() {
